@@ -1,0 +1,24 @@
+<div class="rules">
+  <div class="rules-header">
+    <div class="fixed-size">
+      <div class="rules-header-title">{{service.title}}</div>
+      <div class="rules-header-subtitle">{{service.subtitle}}</div>
+    </div>
+  </div>
+  <div class="rules-container">
+    <div class="rules-content">
+      <div class="rules-info">
+        <div class="rules-info-text" [innerHTML]='service.text'></div>
+        <div class="rules-info-date">Последний раз обновлялось: {{service.date}}</div>
+      </div>
+    </div>
+    <div class="rules-category">
+      <app-rules-category
+      *ngFor="let rule of service.rules"
+      [id] = "rule.id"
+      [title] = "rule.title"
+      [subtitle] = "rule.subtitle"
+      ></app-rules-category>
+    </div>
+  </div>
+</div>
