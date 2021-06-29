@@ -15,7 +15,7 @@ export class RulesComponent implements OnInit {
   constructor(private activateRoute: ActivatedRoute, public service: RulesService, private router: Router) {
       this.subscription = activateRoute.params.subscribe(params=>this.id=params['id']);
       this.router.events.subscribe((ev: any) => {
-      if (ev instanceof NavigationEnd) { this.service.get(this.id) }
+      if (ev instanceof NavigationEnd) { this.service.get(this.id); window.scroll(0,0); }
     });
      }
 

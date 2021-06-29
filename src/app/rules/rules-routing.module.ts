@@ -6,7 +6,8 @@ import { RulesComponent } from './pages/rules/rules.component';
 const routes: Routes = [
   {
     path: '',
-    component: RulesComponent
+    redirectTo: '1',
+    pathMatch: 'full'
   },
   {
     path: ':id',
