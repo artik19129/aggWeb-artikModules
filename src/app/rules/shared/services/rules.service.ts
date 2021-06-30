@@ -15,7 +15,7 @@ export class RulesService {
   constructor(private httpClient: HttpClient) {
     this.getAll()
     this.HTML = function(){
-      var x,mnem:any =
+      var x,mnem: any =
       {34:"quot",38:"amp",39:"apos",60:"lt",62:"gt",402:"fnof",
       338:"OElig",339:"oelig",352:"Scaron",353:"scaron",
       376:"Yuml",710:"circ",732:"tilde",8226:"bull",8230:"hellip",
