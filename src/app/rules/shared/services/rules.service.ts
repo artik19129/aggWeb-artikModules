@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { format } from 'date-fns';
 import { Rules } from '../interfaces/rules.interface';
 
 @Injectable()
@@ -11,7 +10,7 @@ export class RulesService {
   public title: string = '';
   public subtitle: string = '';
   public text: string = '';
-  public date: string = '';
+  public date: Date = new Date();
   private HTML: any;
   constructor(private httpClient: HttpClient) {
     this.getAll()
@@ -92,7 +91,7 @@ export class RulesService {
         this.title = response.title;
         this.subtitle = response.subtitle;
         this.text = this.HTML.decode(response.text);
-        this.date = format(new Date(response.date), 'dd.MM.yyyy в hh:mm');
+        this.date = new Date(response.date);
       })
    }
 }

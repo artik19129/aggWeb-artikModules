@@ -9,7 +9,7 @@
     <div class="rules-content">
       <div class="rules-info">
         <div class="rules-info-text" [innerHTML]='service.text'></div>
-        <div class="rules-info-date">Последний раз обновлялось: {{service.date}}</div>
+        <div class="rules-info-date">Последний раз обновлялось: {{service.date | date:'dd.MM.yyyy'}} в {{service.date | date:'hh:mm'}}</div>
       </div>
     </div>
     <div class="rules-category">
