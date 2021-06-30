@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./rules.component.scss']
 })
 export class RulesComponent implements OnInit {
-  id: number | undefined;
+  id: number = 1;
   private subscription: Subscription;
 
   constructor(private activateRoute: ActivatedRoute, public service: RulesService, private router: Router) {

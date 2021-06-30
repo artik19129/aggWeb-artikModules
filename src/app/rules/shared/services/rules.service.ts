@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { format } from 'date-fns';
+import { Rules } from '../interfaces/rules.interface';
 
 @Injectable()
 
 export class RulesService {
   public rules: any;
   private dataRulesAll: any;
-  public dataRule: any;
   public title: string = '';
   public subtitle: string = '';
   public text: string = '';
@@ -85,14 +85,14 @@ export class RulesService {
       })
    }
 
-   get(id: number | undefined) {
+   get(id: number) {
        this.httpClient.get('https://mouse.api-amazing.com/methods/rules.get?id=' + id)
-      .subscribe((response) => {
-        this.dataRule = response;
-        this.title = this.dataRule.title;
-        this.subtitle = this.dataRule.subtitle;
-        this.text = this.HTML.decode(this.dataRule.text);
-        this.date = format(new Date(this.dataRule.date), 'dd.MM.yyyy в hh:mm');
+       // Как тут использовать интерфейс - не разобрался
+      .subscribe((response: Rules | any) => {
+        this.title = response.title;
+        this.subtitle = response.subtitle;
+        this.text = this.HTML.decode(response.text);
+        this.date = format(new Date(response.date), 'dd.MM.yyyy в hh:mm');
       })
    }
 }
