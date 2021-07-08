@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Rules } from '../interfaces/rules.interface';
 
-@Injectable()
+@Injectable() 
 
 export class RulesService {
   public rules: any;
@@ -79,7 +79,7 @@ export class RulesService {
      this.httpClient.get('http://mouse.api-amazing.com/methods/rules.all')
       .subscribe((response) => {
         this.dataRulesAll = Object.values(response).map(v => Object.values(response));
-        this.dataRulesAll[0].reverse();
+        this.dataRulesAll[0];
         this.rules = this.dataRulesAll[0]
       })
    }

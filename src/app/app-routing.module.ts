@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./rules/rules.module').then(m => m.RulesModule)
   },
   {
+    path: 'download',
+    loadChildren: () => import('./download/download.module').then(m => m.DownloadModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

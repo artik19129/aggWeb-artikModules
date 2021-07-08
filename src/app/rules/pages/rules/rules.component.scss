@@ -1,74 +1,76 @@
-.rules {
-  font-family: Roboto, sans-serif;
-  min-width: 350px;
-  padding: 50px 0;
-  background-color: #f8f8f8;
-  background-image: url(~src/assets/images/pages/rules/background.png);
-  background-size: 100%;
-  background-repeat: repeat-y;
-  background-position: 50%;
+:host {
+  .rules {
+    font-family: Roboto, sans-serif;
+    min-width: 350px;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    background-image: url(~src/assets/images/pages/rules/background.png);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-position: 50%;
 
-  .rules-header {
-    position: sticky;
-    top: 0;
-    background-color: hsla(0, 0%, 96.9%, 0.4);
-    backdrop-filter: blur(16px);
-    border-bottom: 2px solid #f2f2f2;
-    z-index: 1;
-    box-sizing: border-box;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    .rules-header {
+      position: sticky;
+      top: 0;
+      background-color: hsla(0, 0%, 96.9%, 0.4);
+      backdrop-filter: blur(16px);
+      border-bottom: 2px solid #f2f2f2;
+      z-index: 1;
+      box-sizing: border-box;
+      padding-bottom: 10px;
+      padding-top: 10px;
 
-    .fixed-size {
+      .fixed-size {
+        width: 100%;
+        padding: 0 20px;
+        max-width: 1170px;
+        box-sizing: border-box;
+        margin: 0 auto;
+
+        .rules-header-title {
+          word-break: break-word;
+          line-height: 1.5;
+          font-size: 27px;
+          font-weight: 800;
+        }
+
+        .rules-header-subtitle {
+          font-size: 14px;
+          color: gray;
+        }
+      }
+    }
+
+    .rules-container {
       width: 100%;
       padding: 0 20px;
       max-width: 1170px;
       box-sizing: border-box;
       margin: 0 auto;
 
-      .rules-header-title {
-        word-break: break-word;
-        line-height: 1.5;
-        font-size: 27px;
-        font-weight: 800;
+      .rules-category {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        margin-top: 10px;
       }
 
-      .rules-header-subtitle {
-        font-size: 14px;
-        color: gray;
-      }
-    }
-  }
-
-  .rules-container {
-    width: 100%;
-    padding: 0 20px;
-    max-width: 1170px;
-    box-sizing: border-box;
-    margin: 0 auto;
-
-    .rules-category {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-      margin-top: 10px;
-    }
-
-    .rules-content {
-      .rules-info {
-        .rules-info-text {
-          margin: 60px 0;
-          margin-top: 20px;
-          font-size: 19px;
-          line-height: 1.7;
-          //TODO: Не работает с [innerHTML]
-          .blockquote {
-            color: #000;
-            font-style: italic;
-            font-size: 24px;
-            line-height: 1.7;
-            border-left: 2px solid #000;
-            padding-left: 40px;
+      .rules-content {
+        .rules-info {
+          .rules-info-text {
             margin: 60px 0;
+            margin-top: 20px;
+            font-size: 19px;
+            line-height: 1.7;
+            //TODO: Не работает с [innerHTML]
+            .blockquote {
+              color: #000;
+              font-style: italic;
+              font-size: 24px;
+              line-height: 1.7;
+              border-left: 2px solid #000;
+              padding-left: 40px;
+              margin: 60px 0;
+            }
           }
         }
       }
