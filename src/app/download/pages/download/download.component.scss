@@ -6,7 +6,7 @@
     transform: scale(1);
   }
   30% {
-    transform: scale(1.1);
+    transform: scale(1.08);
   }
   100% {
     transform: scale(1);
@@ -33,7 +33,7 @@
     display: flex;
     min-width: 320px;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("/assets/images/pages/download/background.jpg");
     background-size: cover;
     background-position: top;
@@ -41,10 +41,6 @@
     box-sizing: border-box;
     align-items: center;
     padding-top: 80px;
-
-    @media screen and (max-height: 705px) {
-      height: 100%;
-    }
 
     .fixed-size {
       width: 100%;
@@ -113,9 +109,9 @@
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           align-items: center;
-          justify-items: self-end;
+          justify-items: center;
 
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 1155px) {
             align-self: flex-start;
             justify-items: start;
           }
@@ -125,15 +121,17 @@
             font-size: 57px;
             line-height: 70px;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 600px) {
               font-size: 50px;
             }
-            @media screen and (max-width: 425px) {
+
+            @media screen and (max-width: 530px) {
               font-size: 34px;
               line-height: 50px;
               margin-bottom: 50px;
             }
-            @media screen and (max-width: 320px) {
+
+            @media screen and (max-width: 373px) {
               font-size: 28px;
               line-height: 40px;
             }
@@ -145,7 +143,7 @@
             justify-content: center;
             padding: 40px 20px;
             width: 100%;
-            max-width: 461px;
+            max-width: 400px;
             height: 108px;
             font-size: 30px;
             text-transform: uppercase;
