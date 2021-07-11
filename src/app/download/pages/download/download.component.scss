@@ -13,15 +13,6 @@
   }
 }
 
-@keyframes blur {
-  0% {
-    backdrop-filter: blur(0) opacity(0);
-  }
-  100% {
-    backdrop-filter: blur(6px) opacity(1);
-  }
-}
-
 :host {
   * {
     color: #fff;
@@ -59,11 +50,7 @@
       margin: 0 auto;
 
       @media screen and (max-width: 1155px) {
-        transition: backdrop-filter 0.2s;
-        animation-name: blur;
-        animation-duration: 0.5s;
-        animation-timing-function: ease;
-        animation-fill-mode: forwards;
+        backdrop-filter: blur(6px);
       }
 
       .download-wrapper {
@@ -72,6 +59,7 @@
 
         @media screen and (max-width: 1155px) {
           align-items: center;
+          text-align: center;
         }
 
         .download-row {
